@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <app-header></app-header>
+    </header>
+    <div class="modal-footer">
+        <section class="options">
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mdo">
+                <i class="fas fa-user-edit"></i> Buscar</button>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Moda2" data-bs-whatever="@mdo">
+                <i class="fas fa-user-plus"></i> Agregar</button>
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Moda3" data-bs-whatever="@mdo">
+                <i class="fas fa-upload"></i> Subir</button>
+
+        </section>
+    </div>
+    <section class="container">
+        <div id="tbProduct"></div>
+    </section>
+    <!-- modal buscar -->
+    <section>
+
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Editar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Codigo del producto</label>
+                                <input id="inp_code" type="text" class="form-control">
+                                <!--data-->
+
+                            </div>
+                            <div id="Form_Product">
+                            </div>
+                            <div id="messageEdit">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button id="btn_buscar" type="button" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Buscar</button>
+                        <button id="btn_editar" type="button" class="btn btn-warning">
+                            <i class="fas fa-edit"></i> Editar</button>
+                        <button id="btn_eliminar" type="button" class="btn btn-danger">
+                            <i class="fas fa-eraser"></i> Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ventana modal agregar -->
+    <section>
+
+        <div class="modal fade" id="Moda2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Codigo</label>
+                                <input id="inp_newCode" type="text" class="form-control">
+                                <!--data-->
+                                <label for="recipient-name" class="col-form-label">nombre</label>
+                                <input id="inp_newName" type="text" class="form-control">
+                                <label for="recipient-name" class="col-form-label">nit</label>
+                                <input id="inp_newNit" type="text" class="form-control">
+                                <label for="recipient-name" class="col-form-label">precio compra</label>
+                                <input id="inp_newBuyPrice" type="text" class="form-control">
+                                <label for="recipient-name" class="col-form-label">iva</label>
+                                <input id="inp_newIva" type="text" class="form-control">
+                                <label for="recipient-name" class="col-form-label">precio venta</label>
+                                <input id="inp_newSellPrice" type="text" class="form-control">
+                                <label for="recipient-name" class="col-form-label">URL imagen</label>
+                                <input id="inp_newUrl" type="text" class="form-control">
+
+                            </div>
+                            <div id="message">
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btn_crearP" type="button" class="btn btn-success">Crear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ventana modal subir -->
+    <section>
+
+        <div class="modal fade-lg" id="Moda3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Subir Archivo </label>
+                                <input id="inp_documentNew" type="file" class="form-control">
+                            </div>
+
+                            <div id="CSVmessage">
+                            </div>
+                            <div id="result">
+
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button id="btn_Accept" type="button" class="btn btn-primary">Aceptar</button>
+                        <button id="btn_Subir" type="button" class="btn btn-success">Subir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

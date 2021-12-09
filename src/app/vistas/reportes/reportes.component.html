@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <app-header></app-header>
+    </header>
+    <section>
+
+        <label>Documento del Cliente</label>
+        <input _ngcontent-bxh-c55="" id="inp_document" type="text" class="form-control">
+        <br>
+        <button id="btn_findSells" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Modal" data-bs-whatever="@mdo">
+            <i class="fas fa-user-edit"></i> Buscar Ventas</button>
+        <button id="btn_findClient" type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Moda2" data-bs-whatever="@mdo">
+                <i class="fas fa-user-edit"></i> Buscar Cliente</button>
+    </section>
+    <!---------------------------------------------------- modal de ventas ---------------------------------------------------->
+    <section>
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ventas por cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="tblContent"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------------------------------------------- modal clientes ---------------------------------------------------->
+    <section>
+        <div class="modal fade" id="Moda2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">cliente</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div id="tblClient"></div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+</body>
+
+</html>

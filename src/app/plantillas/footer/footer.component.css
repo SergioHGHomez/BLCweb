@@ -1,0 +1,22 @@
+#footer_content {
+    padding-left: 15%;
+    background-color: #000;
+}
+
+h2 {
+    color: #eee;
+    padding-left: 250px;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.img_footer {
+    width: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <app-header></app-header>
+    <main>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="card bg-secondary">
+                    <div class="carta-cabecera">
+                        <h5 class="titulo-carta" style="text-align: center;height: 10px;">NUEVA VENTA</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <ul class="list-group">
+
+                                    <li class="list-group-item">
+
+
+                                        <label class="titulo" style="width:100px;"> Fecha/Hora:</label>
+                                        <input id="date" type="date" class="form-control">
+
+
+                                        <div class="input-group-prepend">
+
+                                            <label class="titulo">Tipo de Venta</label>
+                                            <select id="opventa" class="form-control" style="width:405px;">
+                                                <!-- <option value="0">SELECCIONE</option> -->
+                                                <option value="1">CONTADO</option>
+                                                <option value="2">CUENTA CORRIENTE</option>
+                                                <option value="3">CREDITO</option>
+                                            </select>
+                                        </div>
+                                        <br>
+
+                                        <div class="input-group">
+                                            <span class="input-group-text amber lighten-3" type="button" id="buscarcliente" data-toggle="modal" data-target="#myModalAC"><i
+                                                    class="fas fa-search text-grey" aria-hidden="true"></i>
+                                            </span>
+                                            <input class="form-control my-0 py-1 amber-border" type="text" id="inp_docCliente" placeholder="Ingrese documento del cliente" aria-label="Search" />
+
+                                        </div>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+
+                                        <label class="titulo">Nombre </label>
+
+                                        <input type="text" calss="form-control" placeholder=" Valentino Rossi... " id="inp_nombre" disabled="disabled">
+                                        <hr>
+
+                                        <label class="titulo">Direcciòn:</label>
+
+                                        <input type="text" calss="form-control" placeholder="Cll 64 #1" id="inp_dirr" disabled="disabled">
+                                        <hr>
+
+                                        <label class="titulo">No. Factura:</label>
+
+                                        <input type="text" calss="form-control" placeholder="Eje: 002" id="numFactura" disabled="disabled">
+                                        <hr>
+
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title" style="text-align: center;height: 10px;">DETALLE DEL MOVIMIENTOS</h5>
+                    </div>
+                    <section class="row">
+                        <div class="col">
+                            <div class="card-body">
+                                <form class="row" id="formMovimiento">
+                                    <div class="form-group col-md-2"><label for=""> Codigo</label>
+                                        <input id="inp_code" type="text" class="form-control"></div>
+                                    <div class="form-group col-md-3">
+                                        <label for="">Descripcion</label>
+                                        <select id="selectDescripcion" class="form-control">
+                                           <option value="-1">SELECCIONE</option>
+                                           
+                                       </select>
+                                    </div>
+                                    <div class="form-group col-md-1"><label for="">Cantidad</label><input id="inp_cantidad" type="number" class="form-control" value="1"></div>
+                                    <!-- <div class="form-group col-md-2"><label for="">Valor Uni.</label><input type="text" class="form-control"></div>
+                                    <div class="form-group col-md-2"><label for="">Sub total</label><input type="text" class="form-control"></div> -->
+
+                                    <div class="form-group col-md-1">
+                                        <button id="btn_agregar" class="btn btn-primary" type="button">Agregar</button>
+                                    </div>
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <section class="row mt-4">
+                        <!-- <div id="tb_detalle" class="col">
+                            <table class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Codigo</th>
+                                        <th>Descripcion</th>
+                                        <th>Cantidad</th>
+                                        <th>Valor Uni</th>
+                                        <th>Sub Total</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div> -->
+                        <div id="tbDetalle">
+
+                        </div>
+                    </section>
+                    <!-- <div class="col"><button class="btn btn-dark btn-large">Gardar Factura</button></div> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title" style="text-align: center;height: 10px;">CONDICION DE LA OPERACION</h5>
+                    </div>
+                    <div class="card-body">
+                        <!-- <div class="row">
+                            <div class="col-sm-12">
+                                
+                                <label>CONDICION:</label>
+                                <select id="opcondicion">
+                                    <option value="0">SELECCIONE</option>
+                                    <option value="1">SIMPLE</option>
+                                    <option value="1">COTIZACION</option>
+                                    <option value="1">RESERVA</option>
+                                </select>
+                            </div>
+
+                        </div> -->
+                        <div class="row">
+                            <div class="col-sm-12">
+
+                                <label>Ciudad:</label>
+                                <select id="opCiudad">
+                                    <option value="1">Bogotá</option>
+                                    <option value="2">Medellín</option>
+                                    <option value="3">Cali</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-3">
+
+                            <i class="fas fa-hand-holding-usd"></i>
+                            <label class="titulo">Total</label>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" id="inp_total" placeholder="0.00" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <i class="fas fa-money-check-alt"></i>
+                            <label class="titulo">IVA</label>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" id="inp_iva" placeholder="0.00" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <label class="titulo">Total + IVA</label>
+                        </div>
+                        <div class="col-sm-2">
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">$</span>
+                                </div>
+                                <input type="text" class="form-control" id="inp_totalMasIva" placeholder="0.00" readonly="true">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <a id="registrar" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-ok"></span> Registrar
+                </a>
+                <button id="btn_cancelar" type="button" class="btn btn-primary"><span
+                        class="glyphicon glyphicon-remove"></span>Cancelar</button>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>

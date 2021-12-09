@@ -1,0 +1,15 @@
+body {
+    background-color: #fff;
+}
+
+
+/* nav {
+    width: 99%;
+    border-radius: 0px 0px 30px 30px;
+} */
+
+#mensajeNav {
+    margin-right: 50px;
+    color: #aaa;
+    padding: 0;
+}
